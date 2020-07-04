@@ -8,7 +8,8 @@ def bt_click():
     z = str()
     w = int()
     k = str()
-
+    
+    #others bases to decimal base
     if b==10:
         for i in range(len(y)):
             if y[-(i + 1)] != "0":
@@ -20,7 +21,7 @@ def bt_click():
                 k=""
         l4["text"] = w
     
-    #base  decimal para outras bases
+    #decimal base to others bases
     elif a==10:
         x = int(y)
         while x > 0:
@@ -28,7 +29,7 @@ def bt_click():
             x=(x // b)
         l4["text"] = z
     
-    #outras bases para outras bases
+    #others bases to others bases
     else:
         for i in range(len(y)):
             if y[-(i + 1)] != "0":
@@ -51,14 +52,14 @@ janela.geometry("280x240")
 v0=Label(janela);v0.pack()
 frame = Frame(janela);frame.pack()
 
-l1 = Label(frame, text="De qual base desejas converter:")
+l1 = Label(frame, text="From wich base you want to convert:")
 l1.grid(row=0,column=1)
 l11 = Label(frame, text="Min.2 ", fg="grey"); l11.grid(row=1, column=0)
 l12 = Label(frame, text="Max.64", fg="grey"); l12.grid(row=1, column=2)
 e1 = Entry(frame, width=28, borderwidth=2)
 e1.grid(row=1,column=1)
 
-l2 = Label(frame, text="Para qual base desejas converter:")
+l2 = Label(frame, text="To wich base you want to convert:")
 l2.grid(row=2,column=1)
 l13 = Label(frame, text="Min.2 ", fg="grey"); l13.grid(row=3, column=0)
 l14 = Label(frame, text="Max.64", fg="grey"); l14.grid(row=3, column=2)
@@ -67,15 +68,15 @@ e2.grid(row=3,column=1)
 
 v1=Label(frame); v1.grid(row=4,column=1)
 
-l3 = Label(frame, text="Digite o numero:")
+l3 = Label(frame, text="Type the number:")
 l3.grid(row=5,column=1)
 e3 = Entry(frame, width=28, borderwidth=2)
 e3.grid(row=6,column=1)
 
-l4 = Label(frame, text="Resultado")
+l4 = Label(frame, text="Result")
 l4.grid(row=7,column=1)
 
-bt = Button(janela, text="converter", command=bt_click)
+bt = Button(janela, text="convert", command=bt_click)
 bt.pack()
 
 janela.mainloop()
